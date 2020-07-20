@@ -1,0 +1,19 @@
+{
+  "name": "typescript-design-patterns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leticia Monteiro <leticiamonteiro.design@gmail.com> (https://leticiamrosa.github.io/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.7"
+  },
+  "keywords": [
+    "typescript",
+    "javascript"
+  ]
+}
