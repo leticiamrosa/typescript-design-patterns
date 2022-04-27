@@ -8,17 +8,17 @@ export class QuizQuestion {
 
   public constructor(
     question: string,
-    ans1: string,
-    ans2: string,
-    ans3: string,
-    ans4: string,
+    answer1: string,
+    answer2: string,
+    answer3: string,
+    answer4: string,
     correctAns: number
   ) {
     this._question = question;
-    this._answer1 = ans1;
-    this._answer2 = ans2;
-    this._answer3 = ans3;
-    this._answer4 = ans4;
+    this._answer1 = answer1;
+    this._answer2 = answer2;
+    this._answer3 = answer3;
+    this._answer4 = answer4;
     this._correctAnswer = correctAns;
   }
 
@@ -45,6 +45,24 @@ export class QuizQuestion {
   public get correctAnswer(): number {
     return this._correctAnswer;
   }
-
-
 };
+
+export class TrueFalseQuestion extends QuizQuestion {
+  constructor(question) {
+      super(question, "TRUE", "FALSE", null, null, 1);
+  }
+}
+
+function formatQuestion(quizQuestion: QuizQuestion) {
+  console.log(quizQuestion.question)
+  console.log(`1. ${quizQuestion.answer1}`)
+  console.log(`2. ${quizQuestion.answer2}`)
+  console.log(`3. ${quizQuestion.answer3}`)
+  console.log(`4. ${quizQuestion.answer4}`)
+}
+
+let quizQuestion = new QuizQuestion("Which framework is using Typescript", "React", "Vue", "Angular", "Cycle", 3)
+// formatQuestion(quizQuestion)
+
+let trueFalseQuestion = new TrueFalseQuestion("Typescript is a superset a Javascript, this is broken the principle")
+formatQuestion(trueFalseQuestion)

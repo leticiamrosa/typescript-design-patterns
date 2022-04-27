@@ -5,7 +5,9 @@
   "author": "Leticia Monteiro <leticiamonteiro.design@gmail.com> (https://leticiamrosa.github.io/)",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:typescript": "node",
+    "start": "tsc -w -p"
   },
   "dependencies": {
     "@types/node": "^10.3.3"
